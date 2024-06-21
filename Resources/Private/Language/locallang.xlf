@@ -4,19 +4,16 @@
 		<header/>
 		<body>
 			<trans-unit id="extensionconfiguration.verifcation" xml:space="preserve">
-				<source>Google Verification Token Get From : https://search.google.com/</source>
+				<source>Google Site Verification Code : Get from https://search.google.com/search-console/</source>
 			</trans-unit>
 			<trans-unit id="extensionconfiguration.googleTagID" xml:space="preserve">
-				<source>Google Analytics ID</source>
+				<source>Google Analytics ID : Get from https://analytics.google.com/</source>
 			</trans-unit>
 			<trans-unit id="extensionconfiguration.containerID" xml:space="preserve">
-				<source>Google Tag Manager Container ID</source>
-			</trans-unit>
-			<trans-unit id="extensionconfiguration.conversionTrackingId" xml:space="preserve">
-				<source>Ads Conversion Tracking ID</source>
+				<source>Google Tag Manager ID : Get from https://tagmanager.google.com/</source>
 			</trans-unit>
 			<trans-unit id="extensionconfiguration.adsenseClientId" xml:space="preserve">
-				<source>Adsense Clinet Id</source>
+				<source>Google AdSense ID : Get from https://adsense.google.com/</source>
 			</trans-unit>
 		</body>
 	</file>

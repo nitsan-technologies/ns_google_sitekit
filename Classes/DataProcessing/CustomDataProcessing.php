@@ -28,7 +28,7 @@ class CustomDataProcessing implements DataProcessorInterface{
     ) {
         $extensionConfiguration = GeneralUtility::makeInstance(ExtensionConfiguration::class);
         $extConfiguration = $extensionConfiguration->get('ns_google_sitekit');
-        $processedData['verficationToken'] = $extConfiguration['verificationToken'];
+        $processedData['verificationToken'] = $extConfiguration['verificationToken'];
         $processedData['googleTagID'] = $extConfiguration['googleTagID'];
         $processedData['tagmanagerContainer'] = $extConfiguration['tagmanagerContainer'];
         $processedData['conversionTrackingId'] = $extConfiguration['conversionTrackingId'];

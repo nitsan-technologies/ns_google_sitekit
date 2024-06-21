@@ -2,6 +2,14 @@
     "name": "nitsan/ns-google-sitekit",
     "type": "typo3-cms-extension",
     "description": "Connect Google Analytics, Search Console, PageSpeed Insights, and Tag Manager to your TYPO3 site without coding. Improve your website's performance and SEO with the Official Google Site Kit.",
+    "authors": [
+        {
+            "name": "T3: Navdeepsinh Jethwa",
+            "role": "Developer",
+            "email": "sanjay@nitsan.in",
+            "homepage": "https://nitsantech.com/"
+        }
+    ],
     "license": "GPL-2.0+",
     "keywords": [
       "TYPO3 CMS",

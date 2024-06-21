@@ -1,50 +1,23 @@
 
 
-<f:if condition="{verficationToken}">
+<f:if condition="{verificationToken}">
+    <!-- Google Verification snippet added by TYPO3 Google Site Kit -->
     <link rel="dns-prefetch" href="//www.googletagmanager.com">
-    <meta name="google-site-verification" content="{verficationToken}" />
+    <meta name="google-site-verification" content="{verificationToken}" />
+    <!-- End Google Verification snippet added by TYPO3 Google Site Kit -->
 </f:if>
 
-<f:if condition="{googleTagID} && {conversionTrackingId}">
-    <f:then>
-        <!-- Google Analytics snippet added by TYPO3 Google Site Kit -->
-        <script src="https://www.googletagmanager.com/gtag/js?id={googleTagID}" id="google_gtagjs-js" async></script>
-        <script id="google_gtagjs-js-after">
-        window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
-        gtag("set","linker",{"domains":["{domainName}"]});
-        gtag("js", new Date());
-        gtag("set", "developer_id.dZTNiMT", true);
-        gtag("config", "{googleTagID}");
-        gtag("config", "{conversionTrackingId}");
-        </script>
-        <!-- End Google tag (gtag.js) snippet added by TYPO3 Google Site Kit -->
-    </f:then>
-    <f:else>
-        <f:if condition="{googleTagID}">
-            <!-- Google Analytics snippet added by TYPO3 Google Site Kit -->
-            <script src="https://www.googletagmanager.com/gtag/js?id={googleTagID}" id="google_gtagjs-js" async></script>
-            <script id="google_gtagjs-js-after">
-            window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
-            gtag("set","linker",{"domains":["{domainName}"]});
-            gtag("js", new Date());
-            gtag("set", "developer_id.dZTNiMT", true);
-            gtag("config", "{googleTagID}");
-            </script>
-            <!-- End Google tag (gtag.js) snippet added by TYPO3 Google Site Kit -->
-        </f:if>
-        <f:if condition="{conversionTrackingId}">
-             <!-- Google Ads snippet added by TYPO3 Google Site Kit -->
-             <script src="https://www.googletagmanager.com/gtag/js?id={conversionTrackingId}" id="google_gtagjs-js" async></script>
-             <script id="google_gtagjs-js-after">
-             window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
-             gtag("set","linker",{"domains":["{domainName}"]});
-             gtag("js", new Date());
-             gtag("set", "developer_id.dZTNiMT", true);
-             gtag("config", "{conversionTrackingId}");
-             </script>
-             <!-- End Google tag (gtag.js) snippet added by TYPO3 Google Site Kit -->
-        </f:if>
-    </f:else>
+<f:if condition="{googleTagID}">
+    <!-- Google Analytics snippet added by TYPO3 Google Site Kit -->
+    <script src="https://www.googletagmanager.com/gtag/js?id={googleTagID}" id="google_gtagjs-js" async></script>
+    <script id="google_gtagjs-js-after">
+    window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+    gtag("set","linker",{"domains":["{domainName}"]});
+    gtag("js", new Date());
+    gtag("set", "developer_id.dZTNiMT", true);
+    gtag("config", "{googleTagID}");
+    </script>
+    <!-- End Google tag (gtag.js) snippet added by TYPO3 Google Site Kit -->
 </f:if>
 
 <f:if condition="{tagmanagerContainer}">
@@ -60,7 +33,9 @@
 </f:if>
 
 <f:if condition="{adsenseClientId}">
+    <!-- Google Adsense snippet added by TYPO3 Google Site Kit -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={adsenseClientId}"
      crossorigin="anonymous"></script>
+     <!-- End Google Adsense snippet added by TYPO3 Google Site Kit -->
 </f:if>
 
