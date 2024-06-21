@@ -10,3 +10,9 @@ googleTagID =
 
 # cat=Configuration; type=string; label=LLL:EXT:ns_google_sitekit/Resources/Private/Language/locallang.xlf:extensionconfiguration.containerID
 tagmanagerContainer = 
+
+# cat=Configuration; type=string; label=LLL:EXT:ns_google_sitekit/Resources/Private/Language/locallang.xlf:extensionconfiguration.conversionTrackingId
+conversionTrackingId = 
+
+# cat=Configuration; type=string; label=LLL:EXT:ns_google_sitekit/Resources/Private/Language/locallang.xlf:extensionconfiguration.adsenseClientId
+adsenseClientId = 

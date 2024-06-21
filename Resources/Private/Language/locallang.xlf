@@ -12,6 +12,12 @@
 			<trans-unit id="extensionconfiguration.containerID" xml:space="preserve">
 				<source>Google Tag Manager Container ID</source>
 			</trans-unit>
+			<trans-unit id="extensionconfiguration.conversionTrackingId" xml:space="preserve">
+				<source>Ads Conversion Tracking ID</source>
+			</trans-unit>
+			<trans-unit id="extensionconfiguration.adsenseClientId" xml:space="preserve">
+				<source>Adsense Clinet Id</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

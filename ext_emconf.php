@@ -13,8 +13,7 @@ $EM_CONF['ns_google_sitekit'] = [
     'version' => '1.0.0',
     'constraints' => [
         'depends' => [
-            'typo3' => '10.0.0-12.5.99',
-            'ns_license' => '1.0.0-12.1.99',
+            'typo3' => '10.0.0-12.5.99'
         ],
         'conflicts' => [],
         'suggests' => [],

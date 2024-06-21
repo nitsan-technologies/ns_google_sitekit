@@ -11,8 +11,7 @@
     "support": {
     },
     "require": {
-        "typo3/cms-core": "^10 || ^11 || ^12",
-        "nitsan/ns-license": "^1.0 || ^12"
+        "typo3/cms-core": "^10 || ^11 || ^12"
     },
     "autoload": {
         "psr-4": {
