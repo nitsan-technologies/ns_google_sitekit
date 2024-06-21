@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-08-03T12:31:30Z" product-name="ns_google_sitekit">
+		<header/>
+		<body>
+			<trans-unit id="extensionconfiguration.verifcation" xml:space="preserve">
+				<source>Google Verification Token Get From : https://search.google.com/</source>
+			</trans-unit>
+			<trans-unit id="extensionconfiguration.googleTagID" xml:space="preserve">
+				<source>Google Analytics ID</source>
+			</trans-unit>
+			<trans-unit id="extensionconfiguration.containerID" xml:space="preserve">
+				<source>Google Tag Manager Container ID</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

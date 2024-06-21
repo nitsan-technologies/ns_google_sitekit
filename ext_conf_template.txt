@@ -1,0 +1,12 @@
+################
+### FEATURES ###
+################
+
+# cat=Configuration; type=string; label=LLL:EXT:ns_google_sitekit/Resources/Private/Language/locallang.xlf:extensionconfiguration.verifcation
+verificationToken = 
+
+# cat=Configuration; type=string; label=LLL:EXT:ns_google_sitekit/Resources/Private/Language/locallang.xlf:extensionconfiguration.googleTagID
+googleTagID = 
+
+# cat=Configuration; type=string; label=LLL:EXT:ns_google_sitekit/Resources/Private/Language/locallang.xlf:extensionconfiguration.containerID
+tagmanagerContainer = 

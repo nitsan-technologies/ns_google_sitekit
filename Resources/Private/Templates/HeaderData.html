@@ -1,0 +1,36 @@
+
+
+<f:if condition="{verficationToken}">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <meta name="google-site-verification" content="{verficationToken}" />
+</f:if>
+
+
+<f:if condition="{googleTagID}">
+    <!-- Google Analytics snippet added by TYPO3 Google Site Kit -->
+    <script src="https://www.googletagmanager.com/gtag/js?id={googleTagID}" id="google_gtagjs-js" async></script>
+            <script id="google_gtagjs-js-after">
+            window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+            gtag("set","linker",{"domains":["{domainName}"]});
+            gtag("js", new Date());
+            gtag("set", "developer_id.dZTNiMT", true);
+            gtag("config", "{googleTagID}");
+    </script>
+    <!-- End Google tag (gtag.js) snippet added by TYPO3 Google Site Kit -->
+</f:if>
+
+
+<f:if condition="{tagmanagerContainer}">
+    <!-- Google Tag Manager snippet added by TYPO3 Google Site Kit -->
+    <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','{tagmanagerContainer}');
+    </script>
+    <!-- End Google Tag Manager snippet added by TYPO3 Google Site Kit -->
+</f:if>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={tagmanagerContainer}"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+

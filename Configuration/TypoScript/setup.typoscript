@@ -1,0 +1,14 @@
+page {
+    headerData {
+        5 = FLUIDTEMPLATE
+        5 {
+            file = EXT:ns_google_sitekit/Resources/Private/Templates/HeaderData.html
+            dataProcessing {
+                10 = NITSAN\NsGoogleSitekit\DataProcessing\CustomDataProcessing
+                10 {
+                    as = sitekit
+                }
+            }
+        }
+    }
+}
