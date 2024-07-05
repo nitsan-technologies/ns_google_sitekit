@@ -1,24 +1,24 @@
 
 
-<f:if condition="{verficationToken}">
+<f:if condition="{verificationToken}">
+    <!-- Google Verification snippet added by TYPO3 Google Site Kit -->
     <link rel="dns-prefetch" href="//www.googletagmanager.com">
-    <meta name="google-site-verification" content="{verficationToken}" />
+    <meta name="google-site-verification" content="{verificationToken}" />
+    <!-- End Google Verification snippet added by TYPO3 Google Site Kit -->
 </f:if>
-
 
 <f:if condition="{googleTagID}">
     <!-- Google Analytics snippet added by TYPO3 Google Site Kit -->
     <script src="https://www.googletagmanager.com/gtag/js?id={googleTagID}" id="google_gtagjs-js" async></script>
-            <script id="google_gtagjs-js-after">
-            window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
-            gtag("set","linker",{"domains":["{domainName}"]});
-            gtag("js", new Date());
-            gtag("set", "developer_id.dZTNiMT", true);
-            gtag("config", "{googleTagID}");
+    <script id="google_gtagjs-js-after">
+    window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+    gtag("set","linker",{"domains":["{domainName}"]});
+    gtag("js", new Date());
+    gtag("set", "developer_id.dZTNiMT", true);
+    gtag("config", "{googleTagID}");
     </script>
     <!-- End Google tag (gtag.js) snippet added by TYPO3 Google Site Kit -->
 </f:if>
-
 
 <f:if condition="{tagmanagerContainer}">
     <!-- Google Tag Manager snippet added by TYPO3 Google Site Kit -->
@@ -31,6 +31,11 @@
     </script>
     <!-- End Google Tag Manager snippet added by TYPO3 Google Site Kit -->
 </f:if>
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={tagmanagerContainer}"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<f:if condition="{adsenseClientId}">
+    <!-- Google Adsense snippet added by TYPO3 Google Site Kit -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={adsenseClientId}"
+     crossorigin="anonymous"></script>
+     <!-- End Google Adsense snippet added by TYPO3 Google Site Kit -->
+</f:if>
 

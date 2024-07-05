@@ -2,17 +2,23 @@
     "name": "nitsan/ns-google-sitekit",
     "type": "typo3-cms-extension",
     "description": "Know what's going on with your TYPO3 site? How users visit and interact with your pages? Get Every Insights of Popular Google Tools including Google Analytics, Search Console, Google Ads & AdSense, and Tag Manager to your TYPO3 site without coding. Improve your website's performance and SEO.",
-    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "T3: Navdeepsinh Jethwa",
+            "role": "Developer",
+            "email": "sanjay@nitsan.in",
+            "homepage": "https://nitsantech.com/"
+        }
+    ],
+    "license": "GPL-2.0-or-later",
     "keywords": [
       "TYPO3 CMS",
       "google",
-      "sitekit"
+      "sitekit",
+      "NITSAN"
     ],
-    "support": {
-    },
     "require": {
-        "typo3/cms-core": "^10 || ^11 || ^12",
-        "nitsan/ns-license": "^1.0 || ^12"
+        "typo3/cms-core": "^10 || ^11 || ^12"
     },
     "autoload": {
         "psr-4": {
@@ -20,7 +26,7 @@
         }
     },
     "replace": {
-        "nitsan/ns-google-sitekit": "self.version"
+        "typo3-ter/ns-google-sitekit": "self.version"
     },
     "config": {
         "vendor-dir": ".Build/vendor/",
