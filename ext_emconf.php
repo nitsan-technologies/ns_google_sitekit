@@ -1,8 +1,8 @@
 <?php
 
 $EM_CONF['ns_google_sitekit'] = [
-    'title' => 'Official Site Kit by Google for TYPO3',
-    'description' => "Know what's going on with your TYPO3 site? How users visit and interact with your pages? Get Every Insights of Popular Google Tools including Google Analytics, Search Console, Google Ads & AdSense, and Tag Manager to your TYPO3 site without coding. Improve your website's performance and SEO.",
+    'title' => 'Official Site Kit by Google',
+    'description' => "Know what's going on with your TYPO3 site? How users visit and interact with your pages? Get Every Insights with single click button of Popular Google Tools including Google Analytics, Search Console, Google Ads & AdSense, and Tag Manager to your TYPO3 site without coding. Improve your website's performance and SEO.",
     'category' => 'be',
     'author' => 'T3: Navdeepsinh Jethwa T3: Vishal Solanki',
     'author_company' => 'T3Planet // NITSAN',
