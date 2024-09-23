@@ -2,7 +2,8 @@
 
 $EM_CONF['ns_google_sitekit'] = [
     'title' => 'Site Kit by Google for TYPO3',
-    'description' => "Know what's going on with your TYPO3 site? How users visit and interact with your pages? Get Every Insights with single click button of Popular Google Tools including Google Analytics, Search Console, Google Ads & AdSense, and Tag Manager to your TYPO3 site without coding. Improve your website's performance and SEO.",
+    'description' => "Know what's going on with your TYPO3 site? How users visit and interact with your pages? Get Every Insights with single click button of Popular Google Tools including Google Analytics, Search Console, Google Ads & AdSense, and Tag Manager to your TYPO3 site without coding. Improve your website's performance and SEO.
+     *** Live Demo: https://t3planet.com/sitekit-by-google-for-typo3 *** Documentation & Free Support: https://docs.t3planet.com/en/latest/ExtNsGoogleSiteKit/Index.html",
     'category' => 'be',
     'author' => 'T3: Navdeepsinh Jethwa T3: Vishal Solanki',
     'author_company' => 'T3Planet // NITSAN',
