@@ -1,12 +1,12 @@
 <?php
 
 $EM_CONF['ns_google_sitekit'] = [
-    'title' => 'Site Kit by Google for TYPO3',
-    'description' => "Know what's going on with your TYPO3 site? How users visit and interact with your pages? Get Every Insights with single click button of Popular Google Tools including Google Analytics, Search Console, Google Ads & AdSense, and Tag Manager to your TYPO3 site without coding. Improve your website's performance and SEO. *** Live Demo: https://t3planet.com/sitekit-by-google-for-typo3 *** Documentation & Free Support: https://docs.t3planet.com/en/latest/ExtNsGoogleSiteKit/Index.html",
+    'title' => 'Google Site Kit Integration for TYPO3',
+    'description' => "Integrate Google tools like Analytics, Search Console, Google Ads, AdSense, and Tag Manager into your TYPO3 site—without writing any code. Track user behavior, enhance SEO, and optimize your website’s performance with a single extension.",
     'category' => 'be',
-    'author' => 'T3: Navdeepsinh Jethwa T3: Vishal Solanki',
-    'author_company' => 'T3Planet // NITSAN',
-    'author_email' => 'sanjay@nitsan.in',
+    'author' => 'Team T3Planet',
+    'author_company' => 'T3Planet',
+    'author_email' => 'info@t3planet.de',
     'state' => 'stable',
     'uploadfolder' => 1,
     'createDirs' => '',
