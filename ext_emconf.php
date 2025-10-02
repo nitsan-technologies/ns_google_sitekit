@@ -10,10 +10,10 @@ $EM_CONF['ns_google_sitekit'] = [
     'state' => 'stable',
     'uploadfolder' => 1,
     'createDirs' => '',
-    'version' => '1.0.3',
+    'version' => '1.2.0',
     'constraints' => [
         'depends' => [
-            'typo3' => '10.0.0-12.5.99'
+            'typo3' => '10.0.0-13.4.99'
         ],
         'conflicts' => [],
         'suggests' => [],
