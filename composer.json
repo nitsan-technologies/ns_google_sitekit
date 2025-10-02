@@ -18,7 +18,7 @@
       "NITSAN"
     ],
     "require": {
-        "typo3/cms-core": "^10 || ^11 || ^12"
+        "typo3/cms-core": "^10 || ^11 || ^12 || ^13"
     },
     "autoload": {
         "psr-4": {
