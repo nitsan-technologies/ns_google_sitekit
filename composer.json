@@ -4,8 +4,7 @@
     "description": "Know what's going on with your TYPO3 site? How users visit and interact with your pages? Get Every Insights with single click button of Popular Google Tools including Google Analytics, Search Console, Google Ads & AdSense, and Tag Manager to your TYPO3 site without coding. Improve your website's performance and SEO.",
     "authors": [
         {
-            "name": "T3: Navdeepsinh Jethwa",
-            "role": "Developer",
+            "name": "Team T3Planet",
             "email": "sanjay@nitsan.in",
             "homepage": "https://nitsantech.com/"
         }
@@ -18,7 +17,7 @@
       "NITSAN"
     ],
     "require": {
-        "typo3/cms-core": "^10 || ^11 || ^12"
+        "typo3/cms-core": "^10 || ^11 || ^12 || ^13"
     },
     "autoload": {
         "psr-4": {
