@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace NITSAN\NsGoogleSitekit\DataProcessing;
 
 use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
-use TYPO3\CMS\Core\Http\NormalizedParams;
-use TYPO3\CMS\Core\Site\Entity\Site;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
@@ -23,8 +21,7 @@ class CustomDataProcessing implements DataProcessorInterface
         array $processorConfiguration,
         array $processedData
     ): array {
-        $extensionConfiguration = GeneralUtility::makeInstance(ExtensionConfiguration::class);
-        $extConfiguration = $extensionConfiguration->get('ns_google_sitekit') ?? [];
+        $extConfiguration = $this->getExtensionConfiguration();
 
         $processedData['verificationToken'] = $this->resolveSetting(
             $cObj,
@@ -59,8 +56,8 @@ class CustomDataProcessing implements DataProcessorInterface
 
         $request = $cObj->getRequest();
         $normalizedParams = $request->getAttribute('normalizedParams');
-        $processedData['domainName'] = $normalizedParams instanceof NormalizedParams
-            ? $normalizedParams->getRequestHost()
+        $processedData['domainName'] = is_object($normalizedParams) && method_exists($normalizedParams, 'getRequestHost')
+            ? (string)$normalizedParams->getRequestHost()
             : (string)(GeneralUtility::getIndpEnv('HTTP_HOST') ?: '');
 
         return $processedData;
@@ -72,14 +69,31 @@ class CustomDataProcessing implements DataProcessorInterface
         string $extensionConfigurationKey,
         array $extConfiguration
     ): string {
-        $site = $cObj->getRequest()->getAttribute('site');
-        if ($site instanceof Site) {
-            $siteValue = (string)($site->getSettings()->get($siteSettingKey) ?? '');
-            if ($siteValue !== '') {
-                return $siteValue;
+        $request = $cObj->getRequest();
+        if (method_exists($request, 'getAttribute')) {
+            $site = $request->getAttribute('site');
+            if (is_object($site) && method_exists($site, 'getSettings')) {
+                $settings = $site->getSettings();
+                if (is_object($settings) && method_exists($settings, 'get')) {
+                    $siteValue = (string)($settings->get($siteSettingKey) ?? '');
+                    if ($siteValue !== '') {
+                        return $siteValue;
+                    }
+                }
             }
         }
 
         return (string)($extConfiguration[$extensionConfigurationKey] ?? '');
+    }
+
+    private function getExtensionConfiguration(): array
+    {
+        try {
+            $extensionConfiguration = GeneralUtility::makeInstance(ExtensionConfiguration::class);
+            $configuration = $extensionConfiguration->get('ns_google_sitekit');
+            return is_array($configuration) ? $configuration : [];
+        } catch (\Throwable $exception) {
+            return [];
+        }
     }
 }
