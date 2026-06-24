@@ -1,0 +1,32 @@
+categories:
+  ns_google_sitekit:
+    label: 'Google Site Kit'
+
+settings:
+  ns_google_sitekit.verificationToken:
+    label: 'Google Site Verification Code'
+    description: 'Get from https://search.google.com/search-console/ (HTML tag method – content value only)'
+    category: ns_google_sitekit
+    type: string
+    default: ''
+
+  ns_google_sitekit.googleTagID:
+    label: 'Google Analytics ID'
+    description: 'Measurement ID from https://analytics.google.com/ (e.g. G-XXXXXXXXXX)'
+    category: ns_google_sitekit
+    type: string
+    default: ''
+
+  ns_google_sitekit.tagmanagerContainer:
+    label: 'Google Tag Manager ID'
+    description: 'Container ID from https://tagmanager.google.com/ (e.g. GTM-XXXXXXX)'
+    category: ns_google_sitekit
+    type: string
+    default: ''
+
+  ns_google_sitekit.adsenseClientId:
+    label: 'Google AdSense ID'
+    description: 'Publisher ID from https://adsense.google.com/ (e.g. ca-pub-XXXXXXXXXXXXXXXX)'
+    category: ns_google_sitekit
+    type: string
+    default: ''
