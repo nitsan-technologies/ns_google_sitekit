@@ -15,6 +15,18 @@
 			<trans-unit id="extensionconfiguration.adsenseClientId" xml:space="preserve">
 				<source>Google AdSense ID : Get from https://adsense.google.com/</source>
 			</trans-unit>
+			<trans-unit id="extensionconfiguration.premium" xml:space="preserve">
+				<source>Premium</source>
+			</trans-unit>
+			<trans-unit id="premium.strip.headline" xml:space="preserve">
+				<source>You are using the free version</source>
+			</trans-unit>
+			<trans-unit id="premium.strip.description" xml:space="preserve">
+				<source>Upgrade to Premium for the Site Kit dashboard, PageSpeed Insights and page-wise reports.</source>
+			</trans-unit>
+			<trans-unit id="premium.strip.trial" xml:space="preserve">
+				<source>Start Free Trial</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

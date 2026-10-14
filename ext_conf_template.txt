@@ -2,6 +2,9 @@
 ### Configure Google Tools: ###
 ###############################
 
+# cat=Configuration; type=user[NITSAN\NsGoogleSitekit\Configuration\PremiumStripField->render]; label=LLL:EXT:ns_google_sitekit/Resources/Private/Language/locallang.xlf:extensionconfiguration.premium
+premiumStrip =
+
 # cat=Configuration; type=string; label=LLL:EXT:ns_google_sitekit/Resources/Private/Language/locallang.xlf:extensionconfiguration.verifcation
 verificationToken = 
 
