@@ -8,7 +8,7 @@
 | Composer name | `nitsan/ns-google-sitekit` |
 | Title (ext_emconf) / product name | Google Site Kit Integration for TYPO3 / Site Kit by Google |
 | Namespace | `NITSAN\NsGoogleSitekit\` → `Classes/` |
-| Version (ext_emconf) | 2.0.0 |
+| Version (ext_emconf) | 2.1.0 (latest tag 2.0.0) |
 | Repository | https://github.com/nitsan-technologies/ns_google_sitekit (branch `master`) |
 | Licensing status (NITSAN Free/Freemium sheet) | **Freemium** — this repo is the free version |
 | Premium version (sheet) | https://t3planet.de/sitekit-by-google-fur-typo3 (€179/year) |

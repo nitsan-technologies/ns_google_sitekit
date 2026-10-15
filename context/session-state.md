@@ -13,3 +13,8 @@
 - Moved the Site Settings strip from above the editor into the "Google Site Kit" category (below its
   headline). Verified via DOM on site `camino` (set now included by the developer); one strip, before the
   first setting.
+- Switched the strip to the team-wide standard from the review, same in every NITSAN strip except the name —
+  "You're using the free version of NS Google Site Kit" / "Unlock premium features and get more out of NS Google
+  Site Kit.", two lines, "Start Free Trial →", 14px 18px padding, 6px radius (see `features/premium-cta.md`).
+  Version 2.0.0 → 2.1.0. Site settings placement verified live on 14.3.7; the Extension Configuration placement
+  uses the same `render()` and stylesheet but was not re-opened. Uncommitted.

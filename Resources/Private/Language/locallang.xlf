@@ -19,10 +19,10 @@
 				<source>Premium</source>
 			</trans-unit>
 			<trans-unit id="premium.strip.headline" xml:space="preserve">
-				<source>You are using the free version</source>
+				<source>You're using the free version of NS Google Site Kit</source>
 			</trans-unit>
 			<trans-unit id="premium.strip.description" xml:space="preserve">
-				<source>Upgrade to Premium for the Site Kit dashboard, PageSpeed Insights and page-wise reports.</source>
+				<source>Unlock premium features and get more out of NS Google Site Kit.</source>
 			</trans-unit>
 			<trans-unit id="premium.strip.trial" xml:space="preserve">
 				<source>Start Free Trial</source>

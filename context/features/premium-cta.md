@@ -18,16 +18,20 @@ Same look as ns_revolution_slider / ns_feedback / ns_news_comments.
 
 - `Backend\PremiumStrip::render(string $trialUrl, string $linkTarget = '')` returns the HTML. It only uses
   `IconFactory` and `$GLOBALS['LANG']`, both available in the install tool's failsafe container.
-- Content: `actions-rocket` core icon (`IconSize::SMALL`), headline + description, one `btn btn-primary`
-  "Start Free Trial" link.
+- Content: `actions-rocket` core icon (`IconSize::SMALL`), headline and description on two lines, one
+  `btn btn-primary` "Start Free Trial →" link (the arrow is `aria-hidden` markup, not part of the label).
+- Wording and design are the team-wide standard from the 2026-10-14 review, identical in every NITSAN strip
+  except for the extension name.
 - Labels in `locallang.xlf`:
-  - `premium.strip.headline`: "You are using the free version"
-  - `premium.strip.description`: "Upgrade to Premium for the Site Kit dashboard, PageSpeed Insights and page-wise reports."
+  - `premium.strip.headline`: "You're using the free version of NS Google Site Kit"
+  - `premium.strip.description`: "Unlock premium features and get more out of NS Google Site Kit."
   - `premium.strip.trial`: "Start Free Trial"
   - `extensionconfiguration.premium`: "Premium" (field label in the Extension Configuration)
-- Styling: `.ns-google-sitekit-premium-strip` in `Resources/Public/Css/backend-premium-strip.css` — light-blue
-  bar (`#e7f2fc`, border `#8eb6e8`, 4px `#2b6cb0` left accent, text `#0d2c4a`), `light-dark()` for dark mode,
-  button `#007bff` (hover `#0062cc`).
+- Styling: `.ns-google-sitekit-premium-strip` (+ `-icon`, `-headline`, `-description`) in
+  `Resources/Public/Css/backend-premium-strip.css` — light-blue card (`#e7f2fc`, border `#8eb6e8`, 4px `#2b6cb0`
+  left accent, 6px radius, padding 14px 18px, text `#0d2c4a`), semibold 1.1em headline, `light-dark()` for dark
+  mode, button `#007bff` (hover `#0062cc`, no wrap). In the narrow settings column the button wraps below the
+  text (`flex-wrap`).
 
 ## Placements
 
