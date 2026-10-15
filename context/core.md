@@ -35,6 +35,8 @@
 
 - No PHPUnit, PHPStan, CS fixer or package.json in the repo.
 - CI: `.github/workflows/ter-release.yml` (publishes tags to TER).
+- `.gitattributes` export-ignores `.github/`, `AGENTS.md`, `CLAUDE.md`, `context/`, `tasks/` and itself, so they
+  are not in the GitHub/Composer archive or the TER package (the TER release uploads the GitHub tag archive).
 - English labels only (`Resources/Private/Language/locallang.xlf`); no `.crowdin.yml` or translation files.
 - No `Documentation/` folder; user docs are external (see `docs-map.md`).
 
