@@ -1,27 +1,32 @@
 # Feature — Google tags in the page header
 
-*Status: Done. Code-read; not re-verified in the frontend in the 2026-10-14 session.*
+*Status: Done.*
 
 ## Setup
 
-Either add the site set `nitsan/ns-google-sitekit` to the site (TYPO3 14 way) or include the static template
-"Google Site Kit". Both load `Configuration/TypoScript/setup.typoscript`, which renders `page.headerData.5`
-(FLUIDTEMPLATE `HeaderData.html`, DataProcessor `CustomDataProcessing` with `as = sitekit`).
+Install/activate the extension. TypoScript is registered automatically via `ext_localconf.php`
+(`addTypoScriptSetup` → `Configuration/TypoScript/setup.typoscript`). Configure tag IDs under
+**Settings → Configure extensions → ns_google_sitekit**.
 
-## Settings
+There is **no site set**. An optional static template "Google Site Kit" remains registered for Classic
+installs that prefer including it manually (same setup file; harmless if both load).
 
-| Site setting (set) | Extension configuration key | Output in `HeaderData.html` |
-|---|---|---|
-| `ns_google_sitekit.verificationToken` | `verificationToken` | `dns-prefetch` for googletagmanager.com + `<meta name="google-site-verification">` |
-| `ns_google_sitekit.googleTagID` | `googleTagID` | gtag.js loader + inline config (`linker.domains` = current host, `developer_id.dZTNiMT`) |
-| `ns_google_sitekit.tagmanagerContainer` | `tagmanagerContainer` | GTM head script (no `<noscript>` body iframe) |
-| `ns_google_sitekit.adsenseClientId` | `adsenseClientId` | `adsbygoogle.js?client=…` |
+`setup.typoscript` renders `page.headerData.5` (FLUIDTEMPLATE `HeaderData.html`, DataProcessor
+`CustomDataProcessing`).
+
+## Settings (Extension Configuration only)
+
+| Extension configuration key | Output in `HeaderData.html` |
+|---|---|
+| `verificationToken` | `dns-prefetch` for googletagmanager.com + `<meta name="google-site-verification">` |
+| `googleTagID` | gtag.js loader + inline config (`linker.domains` = current host, `developer_id.dZTNiMT`) |
+| `tagmanagerContainer` | GTM head script (no `<noscript>` body iframe) |
+| `adsenseClientId` | `adsbygoogle.js?client=…` |
 
 - All defaults are `''`. Each snippet renders only when its value is non-empty.
-- `CustomDataProcessing::resolveSetting()`: the site setting wins when non-empty, otherwise the extension
-  configuration value (`ExtensionConfiguration::get('ns_google_sitekit')`, errors → `[]`).
+- Values come from `ExtensionConfiguration::get('ns_google_sitekit')` (errors → `[]`).
 - `domainName` = `normalizedParams->getRequestHost()` (fallback `HTTP_HOST`).
-- The template variables are top-level (`{googleTagID}`), not under `{sitekit}`: the processor writes into
+- Template variables are top-level (`{googleTagID}`), not under `{sitekit}`: the processor writes into
   `$processedData` directly; `as` is unused.
 
 ## Premium (not in this repo)

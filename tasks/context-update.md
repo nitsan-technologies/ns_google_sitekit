@@ -7,7 +7,7 @@
 | Operating principles / guardrails | `context/principles.md` |
 | TYPO3/PHP ranges, dependencies, tooling, conventions, known issues | `context/core.md` |
 | Registration, classes, assets, services | `context/architecture.md` |
-| Header tags, site set settings, extension configuration fallback, TypoScript | `context/features/google-tags.md` |
+| Header tags, Extension Configuration, TypoScript | `context/features/google-tags.md` |
 | Premium strip / ns_license / trial link | `context/features/premium-cta.md` |
 | Check commands | `tasks/run-quality.md` |
 | Doc index | `context/docs-map.md` |

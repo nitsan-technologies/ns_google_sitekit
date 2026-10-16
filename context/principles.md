@@ -8,8 +8,8 @@
 
 The extension is declared for TYPO3 v14 only (Composer and Classic mode).
 
-- The header tags are rendered on every frontend page of a site that includes the set or the static
-  template. A broken template or DataProcessor breaks every page, so test the frontend after each change.
+- The header tags are rendered on every frontend page when the extension is active. A broken template or
+  DataProcessor breaks every page, so test the frontend after each change.
 - The Extension Configuration is rendered by the install tool with the **failsafe container**. Code reached
   from `ext_conf_template.txt` may only use services the failsafe container provides (no backend
   `UriBuilder`, router or module registry). An exception there breaks "Configure extensions" for **all**
@@ -32,10 +32,9 @@ The extension is declared for TYPO3 v14 only (Composer and Classic mode).
 
 ## Guardrails (non-negotiable)
 
-- Keep the site set settings (`Configuration/Sets/ns_google_sitekit/settings.definitions.yaml`), the
-  extension configuration (`ext_conf_template.txt`) and `CustomDataProcessing` in sync when adding or
-  renaming a tag ID.
-- Site settings win over the extension configuration; an empty site setting falls back to it. Keep that order.
+- **No site set.** Configuration is Extension Configuration only (`ext_conf_template.txt`). Keep
+  `CustomDataProcessing` keys in sync when adding or renaming a tag ID.
+- Do not reintroduce `Configuration/Sets/` or site-settings readers without an explicit product decision.
 - Values go into `<script>` and `<meta>` markup; keep Fluid escaping on (no `f:format.raw`).
 - Do not change ns_license from an ns_google_sitekit task; reuse its module and trial modal.
 - All UI text goes into `Resources/Private/Language/locallang.xlf` (English source only; NITSAN translations

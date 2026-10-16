@@ -4,7 +4,7 @@ use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
 defined('TYPO3') || die('Access denied.');
 
-// Adding fields to the tt_content table definition in TCA
+// Optional static template (TypoScript is also auto-loaded in ext_localconf.php).
 ExtensionManagementUtility::addStaticFile(
     'ns_google_sitekit',
     'Configuration/TypoScript',

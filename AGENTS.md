@@ -22,7 +22,7 @@ Manager and AdSense tags in the page header). Load only what your task needs.
 
 | Task | Load |
 |---|---|
-| Header tags, site set settings, extension configuration fallback, TypoScript, DataProcessor | `context/features/google-tags.md` |
+| Header tags, Extension Configuration, TypoScript, DataProcessor | `context/features/google-tags.md` |
 | Premium strip / free trial / ns_license dependency | `context/features/premium-cta.md` |
 | Classes, registration, assets, services | `context/architecture.md` |
 | Lint / validate / manual test | `tasks/run-quality.md` |
@@ -35,8 +35,8 @@ Manager and AdSense tags in the page header). Load only what your task needs.
 | Feature | Status | Agent entry |
 |---|---|---|
 | Verification meta tag, gtag.js, GTM and AdSense snippets in `page.headerData.5` | Done | `context/features/google-tags.md` |
-| Site set `nitsan/ns-google-sitekit` settings with extension configuration fallback | Done | `context/features/google-tags.md` |
-| Premium strip (Site Settings editor + Extension Configuration) + ns_license free-trial deep link | Done (needs ns_license 14.5.4 release) | `context/features/premium-cta.md` |
+| Extension Configuration for tag IDs (no site set) | Done | `context/features/google-tags.md` |
+| Premium strip (Extension Configuration) + ns_license free-trial deep link | Done (needs ns_license 14.5.4 release) | `context/features/premium-cta.md` |
 
 ---
 

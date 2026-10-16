@@ -42,20 +42,16 @@
 
 ## Conventions
 
-- No plugin, content element, backend module or database table. Output is header markup only.
-- `Configuration/Services.yaml` autowires `Classes/*` (added together with the premium strip).
-- Backend JS is a plain ES module in `Resources/Public/JavaScript/`, mapped as `@nitsan/ns-google-sitekit/`
-  in `Configuration/JavaScriptModules.php`. Not built, no TypeScript.
+- No plugin, content element, backend module, database table or **site set**. Output is header markup only.
+- Tag IDs come from Extension Configuration; TypoScript is auto-registered in `ext_localconf.php`.
+- `Configuration/Services.yaml` autowires `Classes/*`.
 - Backend premium strip CSS: `Resources/Public/Css/backend-premium-strip.css` (`light-dark()` colours).
 
 ## Known issues (existing, not fixed)
 
 All code-read unless marked otherwise.
 
-- `CustomDataProcessing` resolves `conversionTrackingId`, but there's no such site setting, extension
-  configuration key or template output.
-- The site set labels and descriptions in `settings.definitions.yaml` are hard-coded English, not `LLL:`.
-- `Configuration/TypoScript/constants.typoscript` is empty.
+- `Configuration/TypoScript/constants.typoscript` is empty (if present).
 - The comment in `Configuration/TCA/Overrides/sys_template.php` says "tt_content" but it registers the
   static template.
 - `ext_emconf.php` still has the obsolete `uploadfolder` / `createDirs` keys.

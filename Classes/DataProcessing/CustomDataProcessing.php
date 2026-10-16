@@ -23,36 +23,10 @@ class CustomDataProcessing implements DataProcessorInterface
     ): array {
         $extConfiguration = $this->getExtensionConfiguration();
 
-        $processedData['verificationToken'] = $this->resolveSetting(
-            $cObj,
-            'ns_google_sitekit.verificationToken',
-            'verificationToken',
-            $extConfiguration
-        );
-        $processedData['googleTagID'] = $this->resolveSetting(
-            $cObj,
-            'ns_google_sitekit.googleTagID',
-            'googleTagID',
-            $extConfiguration
-        );
-        $processedData['tagmanagerContainer'] = $this->resolveSetting(
-            $cObj,
-            'ns_google_sitekit.tagmanagerContainer',
-            'tagmanagerContainer',
-            $extConfiguration
-        );
-        $processedData['conversionTrackingId'] = $this->resolveSetting(
-            $cObj,
-            'ns_google_sitekit.conversionTrackingId',
-            'conversionTrackingId',
-            $extConfiguration
-        );
-        $processedData['adsenseClientId'] = $this->resolveSetting(
-            $cObj,
-            'ns_google_sitekit.adsenseClientId',
-            'adsenseClientId',
-            $extConfiguration
-        );
+        $processedData['verificationToken'] = (string)($extConfiguration['verificationToken'] ?? '');
+        $processedData['googleTagID'] = (string)($extConfiguration['googleTagID'] ?? '');
+        $processedData['tagmanagerContainer'] = (string)($extConfiguration['tagmanagerContainer'] ?? '');
+        $processedData['adsenseClientId'] = (string)($extConfiguration['adsenseClientId'] ?? '');
 
         $request = $cObj->getRequest();
         $normalizedParams = $request->getAttribute('normalizedParams');
@@ -63,36 +37,13 @@ class CustomDataProcessing implements DataProcessorInterface
         return $processedData;
     }
 
-    private function resolveSetting(
-        ContentObjectRenderer $cObj,
-        string $siteSettingKey,
-        string $extensionConfigurationKey,
-        array $extConfiguration
-    ): string {
-        $request = $cObj->getRequest();
-        if (method_exists($request, 'getAttribute')) {
-            $site = $request->getAttribute('site');
-            if (is_object($site) && method_exists($site, 'getSettings')) {
-                $settings = $site->getSettings();
-                if (is_object($settings) && method_exists($settings, 'get')) {
-                    $siteValue = (string)($settings->get($siteSettingKey) ?? '');
-                    if ($siteValue !== '') {
-                        return $siteValue;
-                    }
-                }
-            }
-        }
-
-        return (string)($extConfiguration[$extensionConfigurationKey] ?? '');
-    }
-
     private function getExtensionConfiguration(): array
     {
         try {
             $extensionConfiguration = GeneralUtility::makeInstance(ExtensionConfiguration::class);
             $configuration = $extensionConfiguration->get('ns_google_sitekit');
             return is_array($configuration) ? $configuration : [];
-        } catch (\Throwable $exception) {
+        } catch (\Throwable) {
             return [];
         }
     }
